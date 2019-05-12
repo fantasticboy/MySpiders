@@ -14,11 +14,7 @@
 
 方案2.通过提取旁栏里的目录里的链接，再逐个链接去提取目标页的主体内容。
 
-最后采取方案2，将提取到的内容，不做内容筛选和HTML标签删除，直接通过拼接HTML的架构标签，使用HTML格式存储成网页格式，如图所示。
-
-![image-20190512123143413](/Users/dongheng/Library/Application Support/typora-user-images/image-20190512123143413.png)
-
-![image-20190512123234196](/Users/dongheng/Library/Application Support/typora-user-images/image-20190512123234196.png)
+最后采取方案2，将提取到的内容，不做内容筛选和HTML标签删除，直接通过拼接HTML的架构标签，使用HTML格式存储成网页格式。
 
 # 问题和解决方法：
 
@@ -187,7 +183,7 @@ Pipelines.py
 
 class Crawlliaoxuefengpy3Pipeline(object):
     def process_item(self, item, spider):
-        fp = open("/Users/dongheng/Desktop/py3Tutorial/"+item['title']+'.html','w')
+        fp = open("/Users/username/Desktop/py3Tutorial/"+item['title']+'.html','w')
         fp.write(item['content'])
         fp.close()
 
